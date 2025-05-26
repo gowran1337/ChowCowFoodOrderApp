@@ -1,0 +1,142 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "name": "Garlic Bread",
+      "price": 4.99,
+      "image": "/images/garlicbread.jpg",
+      "category": "appetizer"
+    },
+    {
+      "id": "2",
+      "name": "Bruschetta",
+      "price": 6.5,
+      "image": "/images/bruschetta.jpg",
+      "category": "appetizer"
+    },
+    {
+      "id": "3",
+      "name": "Mozzarella Sticks",
+      "price": 7.25,
+      "image": "/images/mozarellasticks.jpg",
+      "category": "appetizer"
+    },
+    {
+      "id": "4",
+      "name": "Salmon",
+      "price": 16.99,
+      "image": "/images/salmon.jpg",
+      "category": "meal"
+    },
+    {
+      "id": "5",
+      "name": "Beef Burger",
+      "price": 12.5,
+      "image": "/images/beefburger.jpg",
+      "category": "meal"
+    },
+    {
+      "id": "6",
+      "name": "Vegetable Pasta",
+      "price": 14.75,
+      "image": "/images/pasta.jpg",
+      "category": "meal"
+    },
+    {
+      "id": "13",
+      "name": "Alfredo",
+      "price": 15.99,
+      "image": "/images/alfredopasta.jpg",
+      "category": "meal"
+    },
+    {
+      "id": "14",
+      "name": "BBQ Ribs",
+      "price": 18.5,
+      "image": "/images/ribs.jpg",
+      "category": "meal"
+    },
+    {
+      "id": "15",
+      "name": "Risotto",
+      "price": 13.75,
+      "image": "/images/risotto.jpg",
+      "category": "meal"
+    },
+    {
+      "id": "7",
+      "name": "Chocolate Cake",
+      "price": 6.99,
+      "image": "/images/cake.jpg",
+      "category": "dessert"
+    },
+    {
+      "id": "8",
+      "name": "Cheesecake",
+      "price": 7.5,
+      "image": "/images/cheesecake.jpg",
+      "category": "dessert"
+    },
+    {
+      "id": "9",
+      "name": "Ice Cream",
+      "price": 5.25,
+      "image": "/images/icecream.jpg",
+      "category": "dessert"
+    },
+    {
+      "id": "10",
+      "name": "Iced Tea",
+      "price": 3.5,
+      "image": "/images/icedtea.jpg",
+      "category": "drink"
+    },
+    {
+      "id": "11",
+      "name": "Lemonade",
+      "price": 4,
+      "image": "/images/lemonade.jpg",
+      "category": "drink"
+    },
+    {
+      "id": "12",
+      "name": "Sparkling Water",
+      "price": 2.75,
+      "image": "/images/water.jpg",
+      "category": "drink"
+    }
+  ],
+  "users": [
+    {
+      "id": "8b4f",
+      "username": "gowran",
+      "email": "goran.nadiri@hotmail.com",
+      "password": "1q2w3e4r"
+    },
+    {
+      "id": "c07c",
+      "username": "asd",
+      "email": "goran.nadiri@hotmail.com",
+      "password": "221addadad"
+    },
+    {
+      "id": "b332",
+      "username": "gowran",
+      "email": "goran.nadiri@hotmail.com",
+      "password": "1q2w3e"
+    },
+    {
+      "id": "8798",
+      "username": "adsasd",
+      "email": "gowweqeran.nadiri@hotmail.com",
+      "password": "1q2w3e4r5t"
+    },
+    {
+      "id": "02ca",
+      "username": "zerbi",
+      "email": "123@mail.com",
+      "password": "1q2w3e",
+      "confirmPassword": "1q2w3e"
+    }
+  ]
+}
