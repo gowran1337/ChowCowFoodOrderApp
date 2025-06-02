@@ -38,7 +38,7 @@
     {
       "id": "6",
       "name": "Vegetable Pasta",
-      "price": 14.75,
+      "price": 14,
       "image": "/images/pasta.jpg",
       "category": "meal"
     },
@@ -108,34 +108,221 @@
   ],
   "users": [
     {
-      "id": "8b4f",
+      "id": "39a9",
       "username": "gowran",
       "email": "goran.nadiri@hotmail.com",
-      "password": "1q2w3e4r"
-    },
-    {
-      "id": "c07c",
-      "username": "asd",
-      "email": "goran.nadiri@hotmail.com",
-      "password": "221addadad"
-    },
-    {
-      "id": "b332",
-      "username": "gowran",
-      "email": "goran.nadiri@hotmail.com",
-      "password": "1q2w3e"
-    },
-    {
-      "id": "8798",
-      "username": "adsasd",
-      "email": "gowweqeran.nadiri@hotmail.com",
-      "password": "1q2w3e4r5t"
-    },
-    {
-      "id": "02ca",
-      "username": "zerbi",
-      "email": "123@mail.com",
       "password": "1q2w3e",
+      "orders": [
+        {
+          "id": "aa96f6ac-1313-47ef-bb2a-665de56b215b",
+          "items": [
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            },
+            {
+              "name": "Bruschetta",
+              "quantity": 1,
+              "price": 6.5
+            },
+            {
+              "name": "Salmon",
+              "quantity": 1,
+              "price": 16.99
+            },
+            {
+              "name": "Mozzarella Sticks",
+              "quantity": 1,
+              "price": 7.25
+            },
+            {
+              "name": "Beef Burger",
+              "quantity": 1,
+              "price": 12.5
+            },
+            {
+              "name": "Vegetable Pasta",
+              "quantity": 1,
+              "price": 14.75
+            }
+          ],
+          "total": 62.98,
+          "date": "2025-05-28T12:11:59.680Z"
+        },
+        {
+          "id": "25f73d03-4263-4d6c-a1e3-5135a534b5ad",
+          "items": [
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            },
+            {
+              "name": "Bruschetta",
+              "quantity": 1,
+              "price": 6.5
+            }
+          ],
+          "total": 11.49,
+          "date": "2025-05-28T12:13:13.120Z"
+        },
+        {
+          "id": "f39f29a4-3be9-444f-bd2c-50109c8a3b97",
+          "items": [
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            },
+            {
+              "name": "Bruschetta",
+              "quantity": 1,
+              "price": 6.5
+            }
+          ],
+          "total": 11.49,
+          "date": "29 maj 2025 21:01"
+        },
+        {
+          "id": "a82f0eb7-ce3e-4e70-b837-8556ee19935e",
+          "items": [
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            },
+            {
+              "name": "Bruschetta",
+              "quantity": 1,
+              "price": 6.5
+            }
+          ],
+          "total": 11.49,
+          "date": "2025-05-29T19:06"
+        },
+        {
+          "id": "935d7fff-7367-49a7-9669-fb6a063f37fa",
+          "items": [
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            }
+          ],
+          "total": 4.99,
+          "date": "2025-05-29T19:07"
+        },
+        {
+          "id": "d02b3dd4-1e5b-449a-b639-43961d8f27e0",
+          "items": [
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            },
+            {
+              "name": "Bruschetta",
+              "quantity": 1,
+              "price": 6.5
+            },
+            {
+              "name": "Salmon",
+              "quantity": 1,
+              "price": 16.99
+            }
+          ],
+          "total": 28.479999999999997,
+          "date": "2025-05-29T20:53"
+        },
+        {
+          "id": "57df1826-cf39-4dc6-aea2-eff1bd8d4f17",
+          "items": [
+            {
+              "name": "Mozzarella Sticks",
+              "quantity": 1,
+              "price": 7.25
+            },
+            {
+              "name": "Salmon",
+              "quantity": 1,
+              "price": 16.99
+            }
+          ],
+          "total": 24.24,
+          "date": "2025-05-31T14:05"
+        },
+        {
+          "id": "c0091771-442e-4c4c-93f1-c491959c7c17",
+          "items": [
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            }
+          ],
+          "total": 4.99,
+          "date": "2025-05-31T16:09"
+        },
+        {
+          "id": "400ba7e9-2a96-4a42-a2c6-5ac7b657b06e",
+          "items": [
+            {
+              "name": "Bruschetta",
+              "quantity": 1,
+              "price": 6.5
+            },
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            }
+          ],
+          "total": 11.49,
+          "date": "2025-05-31T16:17"
+        },
+        {
+          "id": "3ea870eb-77c7-4fbd-b782-888cc57aa24d",
+          "items": [
+            {
+              "name": "Garlic Bread",
+              "quantity": 1,
+              "price": 4.99
+            }
+          ],
+          "total": 4.99,
+          "date": "2025-05-31T16:24"
+        },
+        {
+          "id": "f9dce748-472a-47f6-b599-6716d30a72a9",
+          "items": [
+            {
+              "name": "Bruschetta",
+              "quantity": 1,
+              "price": 6.5
+            },
+            {
+              "name": "Mozzarella Sticks",
+              "quantity": 1,
+              "price": 7.25
+            }
+          ],
+          "total": 13.75,
+          "date": "2025-05-31T16:25"
+        },
+        {
+          "id": "048fb5b2-a00c-483e-b592-b968a38b7311",
+          "items": [
+            {
+              "name": "Bruschetta",
+              "quantity": 1,
+              "price": 6.5
+            }
+          ],
+          "total": 6.5,
+          "date": "2025-05-31T16:39"
+        }
+      ],
       "confirmPassword": "1q2w3e"
     }
   ]

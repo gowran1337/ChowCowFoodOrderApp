@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
-  const [form, setForm] = useState({ username: "", email: "", password: "", confirmPassword:"" });//skapar en state för att spara användarnamn och lösenord. I början är de tomma strängar därav "".
+  const [form, setForm] = useState({ username: "", email: "", password: "", orders:[] });//skapar en state för att spara användarnamn och lösenord. I början är de tomma strängar därav "".
   const [errors, setErrors] = useState({}); //skapar en state för att spara felmeddelanden
 
   const navigate = useNavigate();
@@ -62,6 +62,7 @@ const RegisterPage = () => {
 
    <div className="whiteBG">
     <form id="loginForm" onSubmit={handleSubmit}>
+      <h2>Register User</h2>
 
       <label>Username</label>
       <input

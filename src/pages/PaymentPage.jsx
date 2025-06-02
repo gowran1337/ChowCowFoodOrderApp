@@ -4,17 +4,19 @@ import { useNavigate } from 'react-router-dom'
 
 const PaymentPage = () => {
     const [selectedOption, setSelectedOption] = useState('Swish'); //manager för välja vilken payment option
-
-        const handleChange = (e) => { //ändrar värdet till det som är valt av användaren i payment option
+ 
+    const handleChange = (e) => { //ändrar värdet till det som är valt av användaren i payment option
             setSelectedOption(e.target.value);
-        };
+    };
+        
 
 
     const navigate = useNavigate()
     const goToIndex = () => {
         
-        navigate('/home') // this takes you to the home page ("/")
+        navigate('/home', { state: { showPopup: true } }); // this takes you to the home page ("/")
       }
+    
     return (  //knapparna ändrar värdet på radioknapparna och renderar rätt inputfält
         <div>
             
@@ -29,10 +31,10 @@ const PaymentPage = () => {
             <form className="paymentForm">
                 <h2>Enter Your Address</h2>
 
-                <label>Name:</label> <input className="inputField" type="text" />
-                <label>City:</label> <input className="inputField" type="text" />
-                <label>Street:</label> <input className="inputField" type="text"  />
-                <label>House Number:</label> <input className="inputField" type="text"  />
+                <label>Name:</label> <input className="inputField" type="text" required />
+                <label>City:</label> <input className="inputField" type="text" required />
+                <label>Street:</label> <input className="inputField" type="text" required  />
+                <label>House Number:</label> <input className="inputField" type="number" required />
 
             </form>
                 
@@ -52,9 +54,9 @@ const PaymentPage = () => {
 
           <p className="creditCardText">Please enter your credit card details below:</p>
           
-          <input className="inputFieldCard" type='number' placeholder="Card Number" />
-          <input className="inputFieldCard" type="number" placeholder="Expiry Date" />
-          <input className="inputFieldCard" type="number" placeholder="CVC" />
+          <input className="inputFieldCard" type='number' placeholder="Card Number" minlength="16" maxlength="16" required/>
+          <input className="inputFieldCard" type="number" placeholder="Expiry Date" minlength="4" maxlength="4" required/>
+          <input className="inputFieldCard" type="number" placeholder="CVC" minlength="3" maxlength="3" required/>
         </div>
       )}
 
@@ -62,7 +64,7 @@ const PaymentPage = () => {
         <div className="swishInput">
           <h3>Swish Number</h3>
           <p>Please enter your Swish number below:</p>
-          <input id="swishInputBox" type="number" placeholder='      +46....'/>
+          <input id="swishInputBox" type="number" minlength="9" maxlength="9" placeholder='      +46....'/>
         </div>
       )}
              

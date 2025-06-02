@@ -8,6 +8,10 @@
      font-family: 'League Spartan', sans-serif;
     border: 1px solid #000;
     
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
 }
 
@@ -86,15 +90,55 @@ border-radius: 100px;
     height: 50px;
     text-align: left;
     color: #3A1818;
+    word-wrap: break-word;
+    width: 140px;
+}
+.username{
+  font-size: 40px;
+}
+ #LatestOrderTitle{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    
+    top: 97px;
+    left: 34px;
+    border-radius: 50px;
+    background-color: #E95322;
+    width: 202px;
+    height: 30px;
+    line-height: 30px;
+ }
+.latest-order{
+  display: flex;
+          
+  width: 190px;
+  height: 77px;
+  background-color: #FA9C10;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  gap: 36px;
+  
+     
+}
+.latest-order-item{
+  font-weight: bold;
 }
 
-.latest-order{
-     width: 201px;
-     height: 101px;
-     background-color: #FA9C10;
-     border-radius: 15px;
-
-     margin: 10px;
+#orderAgainBTN{
+  position: relative;
+  right: 115px;
+    width: 208px;
+     
+    height: 20px;
+    border-radius: 30px;
+    border: 0;
+    
+    color: #3A1818;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 .belowheader{
     display: flex;
@@ -142,6 +186,7 @@ border-radius: 100px;
     grid-template-columns: repeat(2, 1fr);;
     justify-content: center;
     place-items: center;
+
     
     overflow-y: auto; /* enables vertical scroll */
     overflow-x: hidden; /* hides horizontal scroll */
@@ -159,7 +204,7 @@ border-radius: 100px;
 .menu-item{
      
   width: 114px;
-  padding: 5px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   
@@ -171,7 +216,7 @@ border-radius: 100px;
      width: 144px;
   height: 144px;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 0px 0px 15px 15px;
   
   border: #F5CB58 solid 3px;
   
@@ -179,41 +224,57 @@ border-radius: 100px;
 }.item-info {
   display: flex;
   flex-direction: column;
-  align-items: top;
+  justify-content: center;
   gap: 10px;
+
  
-  height:40px;
-  width: 144px;
+  height:30px;
+  width: 150px;
+
+box-sizing: border-box;
 
   position: relative;
-  bottom: 19px;
+  bottom: 30px;
   
 
   background-color: #F5CB58;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   font-size: 15px;
-
     z-index: 100;
 }
 .nameprice{
      font-size: 15px;
-  white-space: nowrap;
+     overflow: hidden;
+  
+    
+ 
   
   
   
     
     
 }
-.namepriceLine{
+.namepriceLine {
   display: flex;
-  gap: 30px;
-  
-  width: 10px;
+  width: 100%;
   padding: 5px;
   box-sizing: border-box;
-  
-   
 
+  /* Add this */
+  justify-content: space-between; /* space between name and price */
+  align-items: center; /* vertical center */
+  gap: 10px; /* optional smaller gap */
+}
+
+.nameprice:first-child {
+  flex: 1;          /* take all remaining space */
+  overflow: hidden; /* keep long names clipped */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nameprice:last-child {
+  flex-shrink: 0; /* price keeps natural size, no shrinking */
 }
 
 .categoryIMG{
@@ -264,13 +325,15 @@ border-radius: 100px;
   display: flex;
   background-color: #F5CB58;
   width: 149px;
-  height: 40px;
+  height: 35px;
   
   justify-content: center;
   gap: 40px;
   
   border-radius: 40px;
   
+  position: relative;
+  bottom: 3px;
  }
 
 .heartIcon{
@@ -306,14 +369,14 @@ border-radius: 100px;
 #loginHello{
  justify-content: center;
     text-align: center;
-    font-size: 24px;
+    
     color: white;
 }
 
 .whiteBG{
     background-color: #F5F5F5;
     width: 393px;
-    height: 699px;
+    height: 682px;
     
     margin-top: 100px;
     border-radius: 30px 30px 0 0;
@@ -344,11 +407,6 @@ form {
   width: 300px; /* optional: set width for a neater look */
   font-weight: bold;
 }
-#loginForm{
-    margin-top: 80px;
-    display: flex;
-  
-}
 
 .submitPageBTN{
     width: 207px;
@@ -363,7 +421,7 @@ form {
     
 }
 .formBTN{
-    margin-top: 80px;
+    margin-top: 30px;
 
     display: flex;
     flex-direction: column;
@@ -577,6 +635,98 @@ form {
   position:relative;
   left: -0.5px;
   
+}
+
+/*confirmation popup*/
+.confirmationContainer{
+  
+  position: fixed; ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #2e7918;
+  padding: 20px;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Ensure it appears above other content */
+
+  width: 250px;
+  height: 550px;
+
+  
+}
+.confirmationPopUp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 24px;
+  color: white;
+ 
+  
+}
+#titlepopup{
+  color: black;
+  font-size: 30px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+#zerbi{
+  
+  margin-bottom: 0px;
+}  
+  
+  
+ 
+.headerPopup{
+  display: flex;
+  justify-content: center;
+  
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+#closePopUp{
+  position: relative;
+  top: 10px;
+  left: 24px;
+  
+  
+
+  
+  cursor: pointer;
+ 
+}
+/*profile*/
+#orderTitle{
+  background-color: #791313;
+}
+.orderHistory{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5CB58;
+  border-radius: 15px;
+
+  overflow-y: auto; /* enables vertical scroll */
+    overflow-x: hidden; /* hides horizontal scroll */
+    height: 550px;
+    
+
+    scrollbar-width: thin;          /* Firefox: thin scrollbar */
+  scrollbar-color: rgba(245, 203, 88, 0.5) transparent;
+  
+}
+#profileContainer{
+  color: #3A1818;
+}
+.profileSummary{
+  display: flex;
+  flex-direction: column;
+ 
 }
 
 

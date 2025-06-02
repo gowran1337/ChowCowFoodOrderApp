@@ -26,7 +26,7 @@ const LoginPage = () => {
 
 
     if (user) {
-       login(res.data.accessToken); // log in the user
+       login(user); // log in the user
        console.log(res.data)
       navigate("/home");
     } else {
@@ -52,7 +52,8 @@ const LoginPage = () => {
         
 
        <form id="loginForm" onSubmit={handleSubmit}>
-        <h3 id="WbText">Welcome Back</h3>
+        <h2 id="WbText">Welcome Back</h2>
+        <p>Login</p>
         <label>Email</label>
       <input className="inputField"
         type="email"

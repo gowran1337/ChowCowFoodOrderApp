@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Menu = ({AddToCart}) => {
+const Menu = ({ AddToCart, AddToFavorites, favorites }) =>  {
   const [menuItems, setMenuItems] = useState([]);
    const [selectedCategory, setSelectedCategory] = useState("All"); //hook som startar på ALL //setSelectedCategory är det som används för att uppdatera kategorien
    
@@ -25,11 +25,14 @@ const categoryMap = {
   "Meals": "Meal",
   "Desserts": "Dessert",
   "Drinks": "Drink",
+  "Favorites": "Favorite"
 };
 
 
   const filteredItems = selectedCategory === "All" //kollar ifall  categories == All vilken den är på startup
   ? menuItems
+  : selectedCategory === "Favorites"
+  ? favorites
   : menuItems.filter(item => 
       item.category.toLowerCase() === 
       (categoryMap[selectedCategory] || selectedCategory).toLowerCase()     //filter är en funktion som går igenom varje item i menuItems och kollar om deras kategori är samma som selectedcategory i usestate
@@ -87,9 +90,15 @@ const categoryMap = {
 
             <div className="item2BtnsContainer">
                 <button className='item2Btns' onClick={() => AddToCart(item)}>
-                  <img className='heartIcon' src="/images/add.svg" alt="Add to Favorites" /></button> {/*skickar det det valda itemet som tas emot av indexpage*/}
-                <button className='item2Btns' onClick={() => AddToCart(item)}>
-                  <img className='heartIcon' src="/images/heart.png" alt="Add to Favorites" />
+                  <img className='heartIcon' src="/images/add.svg" alt="Add to Cart" /></button> {/*skickar det det valda itemet som tas emot av indexpage*/}
+                <button className='item2Btns' onClick={() => AddToFavorites(item)}>
+
+                  <img className='heartIcon' 
+                          src={favorites.some(fav => fav.id === item.id)  //om itemet finns i favorit arrayen, visa ena filledf heart, annars nej
+                            ? "/images/heartFilled.png" 
+                            : "/images/heart.png"} 
+                          alt="Toggle Favorite" 
+                            />
                 </button>
              </div>
 
