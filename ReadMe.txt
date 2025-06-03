@@ -1,5 +1,5 @@
 To use this application, you need to install react by typing in the terminal:
-NPM start
+NPM install
 
 Then you need to direct to the correct directory by typing "cd" and tab until you reach the files directory
 Then
